@@ -41,9 +41,10 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN pip install cryptography
 RUN apt-get install -y git
-RUN chmod 400 /CTF_hw_flag/flag2/flag.txt
+
 
 RUN git clone https://github.com/HeartShen42/CTF_hw_flag.git
+RUN chmod 400 /CTF_hw_flag/flag2/flag2.txt
 
 COPY etc_ssh_sshd_config /etc/ssh/sshd_config
 COPY etc_inetd.conf /etc/inetd.conf
